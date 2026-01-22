@@ -7,6 +7,7 @@
 html,body{
     height: 100%;
     width: 100%;
+    
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -22,3 +23,23 @@ html,body{
     position: relative;
     overflow: hidden;
 }
+
+/* Selected element */
+.selected {
+  outline: 2px solid blue;
+  cursor: move;
+}
+
+/* Resize handles */
+.resize-handle {
+  width: 8px;
+  height: 8px;
+  background: blue;
+  position: absolute;
+}
+
+/* Corner positions */
+.tl { top: 0; left: 0; transform: translate(-50%, -50%); }
+.tr { top: 0; right: 0; transform: translate(50%, -50%); }
+.bl { bottom: 0; left: 0; transform: translate(-50%, 50%); }
+.br { bottom: 0; right: 0; transform: translate(50%, 50%); }
