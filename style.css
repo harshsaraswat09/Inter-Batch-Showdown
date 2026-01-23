@@ -15,6 +15,10 @@ html,body{
     padding: 10px;
     background-color: #f4f4f4;
     border-bottom: 1px solid #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
 #canvas{
@@ -43,3 +47,55 @@ html,body{
 .tr { top: 0; right: 0; transform: translate(50%, -50%); }
 .bl { bottom: 0; left: 0; transform: translate(-50%, 50%); }
 .br { bottom: 0; right: 0; transform: translate(50%, 50%); }
+
+#editor {
+  display: flex;
+  height: 100%;
+}
+
+/* Layer Panel */
+#layers-panel {
+  width: 220px;
+  background: #f7f7f7;
+  border-right: 1px solid #ccc;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+#layers-panel h3 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+/* Layer list */
+#layers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Single layer row */
+.layer-item {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 6px;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.layer-item.active {
+  background: #dbeafe;
+  border-color: #2563eb;
+}
+
+/* Buttons */
+.layer-controls button {
+  border: none;
+  background: #eee;
+  cursor: pointer;
+  padding: 2px 6px;
+  margin-left: 4px;
+}
